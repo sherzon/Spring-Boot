@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Employee Forum</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        body{
+            margin-top: 5em;
+            background-color: silver;
+        }
+        h1{
+            text-align: center;
+            font-weight: bold;
+        }
+        form{
+            margin-left: 32.6em;
+        }
+        label{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+	<h1>Form</h1>
+    <form action="#" th:action="@{/}" th:object="${greeting}" method="post">
+        <label>Enter the employee number:</label><br>
+    	<input type="text" th:field="*{id}" /><br>
+        <label>Enter the employee name:</label><br>
+        <input type="text" th:field="*{content}" /><br>
+        <input type="submit" value="Submit" /> <input type="reset" value="Reset" />
+    </form>
+</body>
+</html>

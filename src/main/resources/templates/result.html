@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Employee Forum</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        body{
+            margin-top: 5em;
+            background-color: silver;
+        }
+        h1,h3{
+            text-align: center;
+            font-weight: bold;
+        }
+        p{
+            text-align: center;
+        }
+        .returnClass{
+            /*text-align: center;*/
+            margin-left: 34em;
+            text-decoration: none;
+            color: green;
+
+        }
+    </style>
+</head>
+<body>
+	<h1>Welcome To Employee Forum</h1>
+    <p th:text="'Id: ' + ${greeting.id}" />
+    <p th:text="'Name: ' + ${greeting.content}" />
+    <a class="returnClass" href="/">Submit another message</a>
+</body>
+</html>
